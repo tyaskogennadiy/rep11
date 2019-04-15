@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>hw1</h1>
+  <script>
+            var ScreenWidth=parseFloat(prompt("Введіть ширену екрану",""));
+            var AmountElements=parseInt(prompt("Введіть кількість елементів","0"));
+            var ScreenElements=ScreenWidth/AmountElements;
+            document.write("Ширина елемента="+ScreenElements);
+        </script>
+        <h1>hw2</h1>
+        <script>
+        var Salary=parseInt(prompt("Введіть зарплату",""));
+        var LivingWage=parseInt(prompt("Введіть прожитковий мінімум",""));
+        var SocialHelp=LivingWage-Salary;
+        document.write("Соціальна допомога="+SocialHelp);
+        </script>
+        <h1>hw3</h1>
+        <script>
+        var price1=parseFloat(prompt("ціна першого",""));
+        var quantity1=parseInt(prompt("к-сть",""));
+        var price2=parseFloat(prompt("ціна другого",""));
+        var quantity2=parseInt(prompt("к-сть",""));
+        var cost1=price1*quantity1;
+        var cost2=price2*quantity2;
+        var FullCost=cost1+cost2;
+        document.write("Вартість першого="+cost1 ,
+        " Вартість другого="+cost2  ,
+        " Загальна вартість="+FullCost);
+        </script>
+        <h1>hw4        </h1>
+        <script>
+            var age=parseInt(prompt("Скільки років дитині?",""));
+            var GoChildrenGaden=3-age;
+            var GoSchool=7-age;
+            var GoUniversiti=17-age;
+            var UnsversiriEnd=22-age;
+            document.write("Піде у садочок в "+GoChildrenGaden,
+            "  Піде у школу в "+GoSchool,
+            "  Поступить у вуз "+GoUniversiti,
+            "  Закінчить вуз у "+UnsversiriEnd)
+        </script>
+        <h1>hw5</h1>
+        <script>
+        var Salary=parseFloat(prompt("Введіть зарплату",""));
+        var SalaryOnHends=Salary*0.8;
+        document.write("Отримае "+SalaryOnHends);
+        </script>
+
+    <h1>hw6</h1>
+    <script>
+        var a1=parseFloat(prompt("Введіть a",""));
+        var b1=parseFloat(prompt("Введіть b",""));
+        var c1=parseFloat(prompt("Введіть c",""));
+        var a=b1;
+        var b=c1;
+        var c=a1;
+        document.write(" a="+a," b="+b," c="+c) 
+    </script>
+    <h1>hw7</h1>
+    <script>
+    var x=parseFloat(prompt("Введіть х",""));
+    var WholePart=parseInt(x) ;
+    var FractionalPart=x-WholePart;
+    document.write("Ціла частина="+WholePart," Дробова частина="+FractionalPart);
+    </script>
+    <h1>hw8</h1>
+    <script>
+    var year=parseInt(prompt("Введіть рік",""));
+    var century=parseInt((year+99)/100);
+    document.write(century+" століття")
+    </script>
+    <h1>hw9</h1>
+    <script>
+    var second=parseInt(prompt("Введіть к-сть пройдених секунд",""));
+    var minute=parseInt(second/60);
+    var hour=parseInt(second/3600);
+    document.write("Хвилин "+minute , " Годин "+hour);
+    </script>
+    <h1>hw10</h1>
+    <script>
+    var coin=parseInt(prompt("Введіть к-сть монет",""));
+    var grn=parseInt(coin/100);
+    var kop=parseInt(coin-(grn*100));
+    document.write(grn+" гривен ", kop+ " копійок");
+    </script>
+    <h1>hw11</h1>
+    <script>
+    var coin=parseInt(prompt("Введіть к-сть монет",""));
+    var grn=parseInt(coin*2/100);
+    var kop=parseInt((coin*2)-(grn*100));
+    document.write(grn+" гривен ", kop+ " копійок");
+    </script>
+    <h1>hw12</h1>
+    <script>
+     var day=parseInt(prompt("Введіть к-сть пройдених днів",""));
+    var week=parseInt(day/7);
+    document.write(week+" тижнів");
+    </script>
+    
+</body>
+</html>

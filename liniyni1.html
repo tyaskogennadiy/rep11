@@ -12,7 +12,7 @@
   <script>
             var ScreenWidth=parseFloat(prompt("Введіть ширену екрану",""));
             var AmountElements=parseInt(prompt("Введіть кількість елементів","0"));
-            var ScreenElements=ScreenWidth/AmountElements;
+            var ScreenElements=Math.floor(ScreenWidth/AmountElements);
             document.write("Ширина елемента="+ScreenElements);
         </script>
         <h1>hw2</h1>
@@ -67,7 +67,7 @@
     <h1>hw7</h1>
     <script>
     var x=parseFloat(prompt("Введіть х",""));
-    var WholePart=parseInt(x) ;
+    var WholePart=Math.floor(x) ;
     var FractionalPart=x-WholePart;
     document.write("Ціла частина="+WholePart," Дробова частина="+FractionalPart);
     </script>
@@ -88,18 +88,20 @@
     <script>
     var coin=parseInt(prompt("Введіть к-сть монет",""));
     var grn=parseInt(coin/100);
-    var kop=parseInt(coin-(grn*100));
+    var kop=parseInt(coin - grn*100 );
     document.write(grn+" гривен ", kop+ " копійок");
     </script>
     <h1>hw11</h1>
     <script>
     var coin=parseInt(prompt("Введіть к-сть монет",""));
-    var grn=parseInt(coin*2/100);
-    var kop=parseInt((coin*2)-(grn*100));
+    let s=coin*2
+    var grn=Math.floor(s/100);
+    var kop=s%100; 
     document.write(grn+" гривен ", kop+ " копійок");
     </script>
     <h1>hw12</h1>
     <script>
+        // fggh
      var day=parseInt(prompt("Введіть к-сть пройдених днів",""));
     var week=parseInt(day/7);
     document.write(week+" тижнів");

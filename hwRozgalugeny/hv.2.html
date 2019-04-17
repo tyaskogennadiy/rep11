@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hw2</h1>
+    // Комп’ютер загадує число від 1 до 5. Дати можливість користувачу за 2 спроби вгадати загадане комп’ютером число.
+<script>
+var numeric=1+Math.floor(5*Math.random());
+var a =parseInt(prompt("vvedite 1",""));
+var b =parseInt(prompt("vvedite 2",""));
+if((numeric == a)||(b == numeric))
+{document.write("trru")}
+else
+{document.write(numeric)}
+</script>
+<h1>hw3</h1>
+// Комп’ютер випадковим чином вибирає початок і кінець проміжку (проміжок повинен знаходитися в межах від 1 до 100). Користувач вводить число і виграє, якщо число знаходиться у цьому проміжку, або розташоване від нього (від лівого або правого краю) не більше ніж на 10.
+<script>
+    var a=1+Math.floor(100*Math.random());
+    var b=1+Math.floor(100*Math.random());
+    var n=parseInt(prompt("n=від 1 до 100"))
+    if(a<b){
+     let a1=a-10;
+     let b1=b+10;
+     if((a1<=n)&&(n<=b1))
+     document.write("trru")
+     else
+     document.write(a ,"and"+b)
+    }
+else{
+    let a1=a+10;
+     let b1=b-10;
+     if((b1<=n)&&(n<=a1))
+     document.write("trru")
+     else
+     document.write("game over "+b,"and"+a) 
+}
+</script>
+<h1>hw3</h1>
+// Комп’ютер загадує число від 1 до 10. Двоє користувачів надають свої відповіді. Виграє той, у кого число знаходиться ближче до загаданого комп’ютером числа.
+
+<script>
+    var n=1+Math.floor(10*Math.random());
+var first=parseInt(prompt("Вводить перший",""));
+var second=parseInt(prompt("Вводить другий",""));
+var a=Math.abs(n-first);
+var b=Math.abs(n-second);
+if(a<b)
+document.write("Виграв перший ",+n)
+else
+document.write("Виграв другий ",+n)
+</script>
+    
+</body>
+</html>

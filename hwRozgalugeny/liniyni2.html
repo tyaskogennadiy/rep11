@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hw13</h1>
+//13.	З клавіатури вводиться номер дня тижня (від 1 до 7). Визначити який буде день тижня через N днів.
+    <script>
+    var day=parseInt(prompt("day=",""));
+    var n=parseInt(prompt("n=",""));
+    var nextDay=(day+n)%7;
+    switch(nextDay)
+    {
+        case 1: rezult="Пн";
+        break;
+        case 2: rezult="Вт";
+        break;
+        case 3: rezult="ср";
+        break;
+        case 4: rezult="чт";
+        break;
+        case 5: rezult="пт";
+        break;
+        case 6: rezult="сб";
+        break;
+        case 7: rezult="нд";
+        break;
+    }
+    document.write(rezult)
+    </script>
+    <h1>hw14</h1>  // //* 14.	З клавіатури вводиться кількість місяців, які пройшли від деякого моменту часу. Вивести повну кількість років і місяців. Наприклад, дано 28 місяців, а вивести 2 роки і 4 місяці. *//
+    <script>
+    var month=parseInt(prompt("month=",""));
+    var year=Math.floor(month/12);
+    var mon=month%12;
+    document.write(year+" year ",mon+" month")
+    </script>
+    
+</body>
+</html>

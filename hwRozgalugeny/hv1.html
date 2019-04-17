@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{border-style: solid}
+    </style >
+</head>
+<body>
+    <div >
+        <ol>
+            <li>веселий</li>
+            <li>сумний</li>
+            <li>злий</li>
+        </ol>
+    </div>
+    <script defer>
+    var namber=parseInt(prompt("namber= веселий-1 сумний-2 злий-3",""));
+    switch(namber){
+        case 1: result="<img src='./img/cheerful.jpg'>";
+   break;
+    case 2: result="<img src='./img/sad.jpg'>";
+ break;
+    case 3: result="<img src='./img/evil.jpg'>";
+    break;
+    default: result="error";
+    break;
+    }
+    document.write(result)
+    </script>
+    <h1>hw2</h1>
+    // Комп’ютер загадує число від 1 до 5. Дати можливість користувачу за 2 спроби вгадати загадане комп’ютером число.
+<script defer>
+var numeric=1+Math.floor(5*Math.random());
+var a=parseInt(prompt("vvedite 1"));
+var b=parseInt(prompt("vvedite 2"));
+if((numeric==a)||(numeric==b))
+document.write("trru")
+else
+document.write("fols "+numeric)
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    //Морський бій. Ворожий корабель, може знаходитись в одному із квадратів (кількість квадратів вводиться з клавіатури), які розташовані лінійно (один за одним) на річці. 
+<script>
+var n=parseInt(prompt("n="));
+var pozishen=1+Math.floor(n*Math.random());
+var first=parseInt(prompt("first shot"));
+if((--pozishen>first)||(first>++pozishen)){
+    document.write("missed");
+    var second=parseInt(parent("second shot"));
+    if(second==pozishen)
+    document.write("victory")
+    else
+    document.write("game over"+pozishen)
+}
+else{
+    if(first==pozishen)
+    document.write("victory")
+    else{
+    document.write("near");
+    var second=parseInt(prompt("second shot"));
+    if(second==pozishen)
+    document.write("victory")
+    else
+    document.write("game over"+pozishen)
+
+    }
+
+}
+</script>
+    
+</body>
+</html>

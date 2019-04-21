@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    1.1. Найбільше серед двох різних замінити на 0. -->
+    <script>
+        var a = parseInt(prompt("a=", ""));
+        var b = parseInt(prompt("b=", ""));
+        if (a > b) {
+            a = 0
+            document.write("a=" + a, "b=" + b)
+        }
+        else {
+            b = 0
+            document.write(`a= ${a}  b= ${b}`)
+        }
+    </script>
+    <h1>hw2</h1>
+    1.1.1. Найбільше серед двох замінити на 0. Якщо однакові, то замінити обидва на 1.
+    <script>
+        var a = parseInt(prompt("a=", ""));
+        var b = parseInt(prompt("b=", ""));
+        if (a == b) {
+            a = b = 1
+            document.write(`a= ${a}  b= ${b}`)
+        }
+        else {
+            if (a > b) {
+                a = 0
+                document.write("a=" + a, "b=" + b)
+            }
+            else {
+                b = 0
+                document.write(`a= ${a}  b= ${b}`)
+            }
+
+        }
+
+    </script>
+    <h1>hw3</h1>
+    1.2. З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+    <script>
+        var prais = parseInt(prompt("яка ціна?"));
+        var money = parseInt(prompt("к-сть грошей"));
+        if (money < prais)
+            alert("sorry");
+        else {
+            money = money - prais
+            if (money > 4)
+                alert("купіть лотерею")
+            else
+                alert("покупку здийснено!!!")
+        }
+    </script>
+     <h1>hw4</h1>
+     Задача 2. З клавіатури вводиться назва категорії водія. Вивести на екран назву транспортного засобу, яким він може керувати
+    <script>
+        let kategory = prompt("Введіть категорію?");
+        switch (kategory) {
+            case "A": kategory = "мотоцикл";
+                break;
+            case "B": kategory = "авто";
+                break;
+            case "C": kategory = "мікроавтобус";
+                break;
+            case "D": kategory = "автобус";
+                break;
+            default: kategory = "error";
+                break;
+        }
+        document.write(kategory);
+    </script>
+    <h1>hw5</h1> 
+     Задача 2. З клавіатури вводяться два числа. Вибравши номер операції обчислити результат. 
+     <script>
+        var a = parseInt(prompt("a=", ""));
+        var b = parseInt(prompt("b=", ""));
+        var komanda=parseInt(prompt(`1=a+b\n2=a-b\n3=a*b\n4=a/b`))
+        switch (komanda) {
+            case 1: kategory = a+b;
+                break;
+            case 2: kategory = a-b;
+                break;
+            case 3: kategory = a*b;
+                break;
+            case 4: kategory = a/b;
+                break;
+            default: kategory = "error";
+                break;
+        }
+        document.write(kategory);
+    
+    </script> 
+    <h1>hw6</h1>
+    Задача 3. Модифікувати попереднє завдання ввівши не номер операції, а саму операцію.
+    <script>
+            var a = parseInt(prompt("a=", ""));
+            var b = parseInt(prompt("b=", ""));
+            var komanda=parseInt(prompt("Введіть операцію",""));
+            switch (komanda) {
+                case "+" : kategory = a+b;
+                    break;
+                case "-" : kategory = a-b;
+                    break;
+                case "*": kategory = a*b;
+                    break;
+                case "/": kategory = a/b;
+                    break;
+                default: kategory = "error";
+                    break;
+            }
+            document.write(kategory);
+        
+        </script>
+     <h1>hw7</h1>
+        1.	На роботу компаніє приймає працівників від 32 до 45 років. З клавіатури вводиться вік претендента. З’ясувати, чи може він бути прийнятим на роботу.
+        <script>
+        let age=parseInt(prompt("age?"));
+        var rezultat=(32<age&&age<45)?"troo":"folls"
+        alert(rezultat)
+        </script>
+        <h1>hv8</h1>
+        3.	З клавіатури вводяться імена двох дітей та кількість шоколадок. Вивести не екран ім’я того учня, у якого кількість шоколадок є більшою.
+        
+     <script>
+        let name1 = prompt("name 1?");
+        let quantity1 = parseInt(prompt("quantity 1?"));
+        let name2 = prompt("name 2?");
+        let quantity2 = parseInt(prompt("quantity 2?"));
+        let rezultat=(quantity1>quantity2)?name1:name2
+        alert(rezultat)
+    </script>
+     <h1>hv9</h1>
+    4. З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом,
+    працівником, пенсіонером).
+    <script>
+        let age = parseInt(prompt("age?"));
+        let rezultat;
+        if (3 <= age && age < 7)
+            rezultat = "childrengaden";
+        if (7 <= age && age < 18)
+            rezultat = "school";
+        if (18 <= age && age < 23)
+            rezultat = "student";
+        if (23 <= age && age < 66)
+            rezultat = "woker";
+        if (age >= 66)
+            rezultat = "pensioner";
+        alert(rezultat)
+    </script>
+     <h1>hw10</h1>
+    5. З клавіатури вводиться поточний час (дві змінні цілого типу: кількість годин і кількість хвилин) протягом якогось
+    із перших 3 уроків (початок о 8.30). З’ясувати, який із трьох триває урок.
+    <script>
+        let hour = parseInt(prompt("hour?"));
+        let minute = parseInt(prompt("minute?"));
+        if ((hour == 8 && minute >= 30 && minute < 60) || (hour == 9 && minute < 15))
+            rezultat = "перший урок"
+        if ((hour == 9 && minute >= 25 && minute < 60) || (hour == 10 && minute < 10))
+            rezultat = "другий урок"
+        if ((hour == 10 && minute >= 20 && minute < 60) || (hour == 11 && minute < 5))
+            rezultat = "третий урок"
+        if ((hour == 9 && minute >= 15 && minute < 25) || (hour == 10 && minute >= 10 && minute < 20))
+            rezultat = "перерва"
+        alert(rezultat)
+    </script>
+ <h1>hw11</h1>
+    6. У двох дітей є цукерки трьох типів «Червоний мак», «Ліщина», «Білочка» (кількість кожного виду цукерок у кожної
+    дитини вводиться з клавіатури). Вивести на екран одне із повідомлень:
+    1)у однієї із дітей кожного типу цукерок більше;
+    2)у однієї із дітей двох типів цукерок більше;
+    3)кількість кожного з видів цукерок однакова.
+    4)інше.
+    <script>
+        let a1 = parseInt(prompt("a1?"));
+        let b1 = parseInt(prompt("b1?"));
+        let c1 = parseInt(prompt("c1?"));
+        let a2 = parseInt(prompt("a2?"));
+        let b2 = parseInt(prompt("b2?"));
+        let c2 = parseInt(prompt("c2?"));
+        if (a1 < a2 && b1 < b2 && c1 < c2 || a1 > a2 && b1 > b2 && c1 > c2)
+            rezultat = "у однієї із дітей кожного типу цукерок більше";
+        else {
+            if ((a1 < a2 && b1 < b2 || a1 < a2 && c1 < c2 || b1 < b2 && c1 < c2) || (a1 > a2 && b1 > b2 || a1 > a2 && c1 > c2 || b1 > b2 && c1 > c2))
+                rezultat = "у однієї із дітей двох типів цукерок більше";
+            else {
+                if (a1 == a2 && b1 == b2 && c1 == c2)
+                    rezultat = "кількість кожного з видів цукерок однакова";
+                else
+                    rezultat = "інше";
+            }
+        }
+        alert(rezultat)
+    </script>
+     <h1>hw12</h1>
+    7. Родина їде на відпочинок автомобілем. З клавіатури вводиться наявна кількість літрів палива, витрати палива на
+    100 кілометрів та відстань, яку необхідно подолати. Вивести на екран чи потрібно, чи не потрібно буде додатково
+    заправляти автомобіль.
+    <script>
+        let fuel = parseInt(prompt("наявна кількість літрів палива?"));
+        let breakdown = parseInt(prompt("витрати палива на 100 кілометрів?"));
+        let distance = parseInt(prompt("відстань?"));
+        let rezultat = (fuel / breakdown * 100 > distance) ? "достатньо" : "треба дозаправити"
+        alert(rezultat)
+    </script>
+     <h1>hw13</h1>
+    8. Користувач може здійснити покупку у одному із двох відділів («побутова техніка» або «інструменти»). При цьому у
+    кожному із відділів йому будуть пропонувати один із перерахованих товарів:
+    «побутова техніка»:
+    - телевізор;
+    - праска;
+    - планшет;
+    «інструменти»
+    - лопата;
+    - граблі;
+    - мітла;
+    - пила.
+    Вивести на екран назву товару, яку вибрав користувач.
+
+    <script>
+        var department = parseInt(prompt("Оберіть відділ?\n 1-Побутова техніка\n 2-Інструменти"));
+        if (department == 1) {
+            let goods = parseInt(prompt(`Виберіть товар:\n1-телевізор;\n2-праска;\n3-планшет;`));
+            switch (goods) {
+                case 1: rezultat = "телевізор";
+                    break;
+                case 2: rezultat = "праска";
+                    break;
+                case 3: rezultat = "планшет";
+                    break;
+                default: rezultat = "error";
+                    break;
+            }
+            alert(`${rezultat}`)
+        }
+        else {
+            let goods = parseInt(prompt(`Виберіть товар:\n1-лопата;\n2-граблі;\n3-мітла;\n4-пила;`));
+            switch (goods) {
+                case 1: rezultat = "лопата"
+                    break;
+                case 2: rezultat = "граблі"
+                    break;
+                case 3: rezultat = "мітла"
+                    break;
+                case 3: rezultat = "пила"
+                    break;
+                default: rezultat = "error"
+                    break;
+            }
+            alert(`${rezultat}`)
+        }
+    </script> 
+    <h1>hw14</h1>
+    Задача. З використанням операторів вибору реалізувати гру «Камінь ножниці папір» (користувач задає свій варіант,
+    комп’ютер генерує випадковим чином),
+    <script>
+        var user = parseInt(prompt(`1-Камінь\n 2-ножниці\n 3-папір`));
+        var computer = 1 + Math.floor(3 * Math.random());
+        if (user == computer)
+            alert("a draw")
+        else {
+            if (user == 1 && computer == 2 || user == 2 && computer == 3 || user == 3 && computer == 1)
+                alert("you won")
+            else
+                alert("you have lost")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1.	Користувач вводить числа поки не натисне відміну. Знайти 
+ 
+        1.	кількість парних;
+         -->
+    <!-- <script>
+        var k = 0
+        var x = prompt("x=")
+        while (x != null) {
+            if (x % 2 == 0)
+                k++
+            var x = prompt("x=")
+
+        }
+        document.write(k)
+    </script> -->
+    <!-- 2.	добуток непарних; -->
+    <!-- <script>
+        var x = prompt("x=")
+        var dob = 1
+        while (x != null) {
+            if (x % 2 == 1)
+                dob *= x
+            x = prompt("x=")
+        }
+        document.write(dob)
+    </script> -->
+    <!-- 3.	суму двоцифрових; -->
+    <!-- <script>
+        let sum = 0
+        var x = prompt("x=")
+        while (x != null) {
+            if ((9 < x && x < 100)||((-9) > x && x > (-100)))
+                sum += (+x)
+            x = prompt("x=")
+        }
+        document.write(sum)
+    </script> -->
+    <!-- 4.	середнє арифметичне додатних; -->
+    <!-- <script>
+        let k = 0
+        let sum = 0
+        var x = prompt("x=")
+        while (x != null) {
+            if (x >= 0) {
+                sum += (+x)
+                k++
+            }
+            x = prompt("x=")
+        }
+        if (k != 0)
+            document.write(sum / k)
+        else
+            document.write("error")
+    </script> -->
+    <!-- 5.	найбільше від’ємне; -->
+    <!-- <script>
+    var x=prompt("x=")
+    var max=(`-&#8734`)
+    while (x!=null) {
+       if(x<0) 
+       var max=(x<max)?x:max
+       x=prompt("x=")
+    }
+    document.write(max)
+    </script> -->
+    <!-- 6.	кількість більших за перше число; -->
+    <!-- <script>
+        let k = 0
+        var x = prompt("x=")
+        let first = x
+        while (x != null) {
+            k = (x > first) ? k + 1 : k
+            var x = prompt("x=")
+        }
+        document.write(k)
+    </script> -->
+    <!-- 7.	середнє геометричне додатних; -->
+    <!-- <script>
+        let rez
+        var k = 0
+        var dob = 1
+        var x = prompt("x=")
+        while (x != null) {
+            if (x > 0) {
+                dob *= x
+                k++
+
+            }
+            x = prompt("x=")
+        }
+        document.write(rez = Math.pow(dob, 1 / k))
+    </script> -->
+    <!-- 8.	найменше з них; -->
+    <!-- <script>
+        var x = prompt("x=")
+        var min = x
+        while (x != null) {
+
+            min = (x < min) ? x : min
+            x = prompt("x=")
+        }
+        document.write(min)
+    </script> -->
+    <!-- 9.	кількість трицифрових; -->
+    <!-- <script>
+        var k = 0
+        var x = prompt("x=")
+        while (x != null) {
+            k = (99 < Math.abs(x) && Math.abs(x) < 1000) ? k + 1 : k
+            x = prompt("x=")
+        }
+        document.write(k)
+    </script> -->
+    <!-- 10.	добуток кратних 5; -->
+    <!-- <script>
+        var dob = 1
+        var x = prompt("x=")
+        while (x != null) {
+            if (x % 5 == 0)
+                dob *= x
+            x = prompt("x=")
+
+        }
+        document.write(dob)
+    </script> -->
+    <!-- <h1>.  Кожне  … Вивести початкові та отримані значення.</h1> -->
+    <!-- 1.	двоцифрове натуральне число > 80 збільшити на 7. -->
+    <!-- <script>
+        for (let i = 81; i < 100; i++) {
+            var x = i + 7;
+            document.write(`${i} ${x}`)
+            document.write("<br>")
+        }
+    </script> -->
+    <!-- 2.	двоцифрове натуральне число < 30 збільшити у 5 разів. -->
+    <!-- <script>
+        for (let i = 10; i < 30; i++) {
+            var x = i * 5;
+            document.write(`${i} ${x}`)
+            document.write("<br>")
+        }
+    </script> -->
+    <!-- 3.	натуральне число < 20 збільшити на 10. -->
+    <!-- <script>
+        for (let i = 0; i < 20; i++) {
+            var x = i + 10;
+            document.write(`${i} ${x}`)
+            document.write("<br>")
+        }
+    </script> -->
+    <!-- 4.	двоцифрове натуральне парне число збільшити у 5  разів. -->
+    <!-- <script>
+        for (let i = 10; i < 100; i += 2) {
+            var x = i * 5;
+            document.write(`${i} ${x}`)
+            document.write("<br>")
+        }
+    </script> -->
+    <!-- 5.	двоцифрове натуральне число > 30 збільшити на 10 -->
+    <!-- <script>
+        for (let i = 30; i < 100; i++) {
+            var x = i + 10;
+            document.write(`${i} ${x}`)
+            document.write("<br>")
+        }
+    </script> -->
+    <!-- 6.	натуральне число < 20 збільшити у 9 разів.  -->
+    <!-- <script>
+        for (let i = 0; i < 20; i++) {
+            var x = i * 9;
+            document.write(`${i} ${x}`)
+            document.write("<br>")
+        }
+    </script> -->
+    <!-- 7.	двоцифрове натуральне непарне число піднести до квадрата. -->
+    <!-- <script>
+        for (let i = 11; i < 100; i += 2) {
+            var x = i * i;
+            document.write(`${i} ${x}`)
+            document.write("<br>")
+        }
+    </script> -->
+    <!-- 8.	трицифрове натуральне число кратне 7 зменшити в 7 разів -->
+    <!-- <script>
+        for (let i = 100; i < 1000; i++) {
+            if (i % 7 == 0) {
+                var x = i - 7;
+                document.write(`${i} ${x}`)
+                document.write("<br>")
+            }
+        }
+    </script> -->
+    <!-- 9.	двоцифрове натуральне число > 15 збільшити у 9   разів -->
+    <!-- <script>
+        for (let i = 15; i < 100; i++) {
+            var x = i * 9;
+            document.write(`${i} ${x}`)
+            document.write("<br>")
+        }
+    </script> -->
+    <!-- 10.	трицифрове натуральне число зменшити на 100; -->
+    <!-- <script>
+        for (let i = 100; i < 1000; i++) {
+            var x = i - 100;
+            document.write(`${i} ${x}`)
+            document.write("<br>")
+        }
+    </script> -->
+</body>
+
+</html>

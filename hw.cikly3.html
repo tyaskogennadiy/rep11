@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. З клавіатури вводитяться числа поки не буде введено 0. Знайти суму чисел. -->
+    <!-- <script>
+        let sum = 0
+        var x = parseFloat(prompt(`x=`))
+        while (x != 0) {
+            sum += (+x)
+            x = prompt(`x=`)
+        }
+        document.write(sum)
+    </script> -->
+    <!-- З клавіатури вводитяться числа поки не буде введено 0. Знайти добуток чисел. -->
+    <!-- <script>
+        let dob = 1
+        var x = parseFloat(prompt(`x=`))
+        while (x != 0) {
+            dob *= x
+            x = prompt(`x=`)
+        }
+        document.write(dob)
+    </script> -->
+    <!-- 2.1. З клавіатури поступово вводяться символи поки не буде введено символ «а». Вивести рядок символів у зворотному порядку. -->
+    <!-- <script>
+    var x=prompt("x=")
+    while (x!=`a`) {
+       
+        x=prompt("x=")
+        document.write(x) 
+    }
+    document.write(x)
+    
+    </script> -->
+    <!-- 3. З клавіатури вводиться початкове знчення суми. Поки сума є меншою за 100 додавати до неї числа, які вводяться з клавіатури. -->
+    <!-- <script>
+        var sum = parseFloat(prompt("sum="))
+        while (sum < 100) {
+            var x = parseFloat(prompt("x="))
+            sum += x
+        }
+        document.write(sum)
+    </script> -->
+    <!-- 4. З клавіатури поступово вводяться числа. Знайти суму перших N парних чисел. -->
+    <!-- <script>
+        var n = parseInt(prompt("N="))
+        var sum = 0
+        var i = 0
+        while (i < n) {
+            var x = parseInt(prompt("x="))
+            if (x % 2 == 0) {
+                sum += x
+                i++
+            }
+        }
+        document.write(sum)
+    </script> -->
+    <!-- 4.1. З клавіатури вводяться два числа N i M (N<M). Вивести а екран числа
+N---M
+N+1 --- M-1
+N+2 --- M-2
+N+3 --- M-3
+. . . . . . 
+Виведення завершити коли число справа стане меншим за число зліва. -->
+
+    <!-- <script>
+        let n = parseFloat(prompt("N="))
+        let m = parseFloat(prompt("M= (N<M)"))
+        while (n < m) {
+            document.write(`${n}---${m}<br>`)
+            n += 1
+            m -= 1
+        }
+        document.write(`${n}---${m}<br>`)
+    </script> -->
+    <!-- 5. На екрані виводиться меню: 
+1. Сказати «Привіт». 
+2. Сказати «Зачекай». 
+3. Сказати «До побачення». 
+4. Вихід.
+Шляхом вибору пунктів меню виводити відповідні повідомлення, поки не буде вибрано пункт номер 4. -->
+
+    <!-- <script>
+        var x = parseInt(prompt(`1. Сказати «Привіт». 
+                                 2. Сказати «Зачекай». 
+                                 3. Сказати «До побачення». 
+                                 4. Вихід.`))
+        while (x != 4) {
+            switch (x) {
+                case 1: alert("Привіт")
+                    break;
+                case 2: alert("Зачекай")
+                    break;
+                case 3: alert("До побачення")
+                    break;
+
+                default: alert("Error")
+                    break;
+            }
+            var x = parseInt(prompt(`1. Сказати «Привіт». 
+                                     2. Сказати «Зачекай». 
+                                     3. Сказати «До побачення». 
+                                     4. Вихід.`))
+        }
+    </script> -->
+
+    <!-- 6. На екрані виводиться меню:
+	1.Ініціалізація (сума=0)
+	2.Додати 2
+	3.Додати 3
+	4.Відняти 2
+	5.Відняти 3.
+	6.Вивести суму
+	7.Вихід.
+Шляхом поступового вибору відповідних пунктів спробувати отримати число N, яке вводиться з клавіатури. -->
+
+
+    <!-- <script>
+        var n = parseInt(prompt("N="))
+        var sum = 0
+        var x = parseInt(prompt(`1.Ініціалізація (сума=0)
+	                             2.Додати 2
+	                             3.Додати 3
+	                             4.Відняти 2
+	                             5.Відняти 3.
+	                             6.Вивести суму
+	                             7.Вихід.`))
+        while (x != 7) {
+            switch (x) {
+                case 1: sum = 0
+                    break;
+                case 2: sum += 2
+                    break;
+                case 3: sum += 3
+                    break;
+                case 4: sum -= 2
+                    break;
+                case 5: sum -= 3
+                    break;
+                case 6: alert(sum)
+                    break;
+
+                default: alert("Error")
+                    break;
+            }
+            if (sum == n)
+                alert("Ви ввели задану суму")
+            else
+                var x = parseInt(prompt(`1.Ініціалізація (сума=0)
+	                                     2.Додати 2
+	                                     3.Додати 3
+	                                     4.Відняти 2
+	                                     5.Відняти 3.
+	                                     6.Вивести суму
+	                                     7.Вихід.`))
+        }
+    </script> -->
+    <!-- 7. Користувач загадує натуральне число від 1 до N. Шляхом задавання мінімальної кількості запитань знайти вказане число (застосувати бінарний пошук, на кожному кроці якого інтервал пошуку зменшується на 2 шляхом порівняння з елементом, який знаходиться у центрі поточного інтервалу). -->
+
+    <!-- <script>
+        var a = 1
+        var n = parseInt(prompt("N="))
+        var x = Math.floor((a + n) / 2)
+        var i = parseInt(prompt(`Введіть 1 якщо ваше число ${x}
+                                 Введіть 2 якщо ваще число більше за  ${x}
+                                 Введіть 3 якщо ваше число менше за  ${x}`))
+        while (i != 1) {
+            switch (i) {
+                case 2: a = x
+                    break;
+                case 3: n = x
+                    break;
+                default: alert("Error")
+                    break;
+            }
+            var x = Math.floor((a + n) / 2)
+            var i = parseInt(prompt(`Введіть 1 якщо ваше число ${x}
+                                     Введіть 2 якщо ваще число більше за  ${x}
+                                     Введіть 3 якщо ваше число менше за  ${x}`))
+        }
+        alert("Ok")
+    </script> -->
+    <!-- 8. З клавіатури вводиться число. Знаходити суму цифр до тих пір. Поки сума не стане більшую за 20. -->
+    <!-- <script>
+        var sum = 0
+        do {
+            var x = parseFloat(prompt("x="))
+            sum += (+x)
+        }
+        while (sum < 20)
+        document.write(sum)
+    </script> -->
+    <!-- .З клавіатури вводиться пароль (правильний пароль- 78). Поки пароль не вірний дати можливість користувачу повторно ввести його.  -->
+    <!-- <script>
+        do {
+            var password = parseInt(prompt("password="))
+        } while (password != 78);
+        alert("Ok")
+    </script> -->
+    <!-- 10.З клавіатури вводиться вартість одиниці товару. Поки користувач не введе суму грошей, яка достатня для купівлі товару або не відмовиться від купівлі давати можливість вводити суму грошей. -->
+    <!-- <script>
+        var price = parseFloat(prompt("Введіть вартість одиниці товару"))
+        do {
+            var money = prompt("Введіть к-сть грошей")
+        } while ((money < price) && (money != null));
+        alert("Ok!")
+    </script> -->
+    <!-- 11. Комп’ютер загадує випадкове число від 1 до 10. Вгадати число шляхом введеня можливих варіантів. В кінці вивести кількість спроб користувача.  -->
+    <!-- <script>
+        var x = 1 + Math.floor(Math.random() * 10)
+        var n = parseInt(prompt("Введіть N від 1 до 10"))
+        var k = 1
+        while (x != n) {
+            alert("Не вгадали(= спробуйте щераз")
+            n = parseInt(prompt("N= (1-10)"))
+            k++
+        }
+        alert(`Кількість спроб - ${k}\nЗагадане число - ${x}`)
+    </script> -->
+    <!-- 11.1. Комп’ютер загадує два випадкових числа від 1 до 10. Вгадати обидва числа шляхом введеня можливих варіантів. В кінці вивести кількість спроб користувача. -->
+    <!-- <script>
+        var k = 1
+        var x = 1 + Math.floor(Math.random() * 5)
+        var y = 1 + Math.floor(Math.random() * 5)
+        while (x == y) {
+            x = 1 + Math.floor(Math.random() * 5)
+        }
+        var n1 = parseInt(prompt("Введіть перше число від 1 до 5"))
+        var n2 = parseInt(prompt("Введіть друге число від 1 до 5 відміне від першого"))
+        while (n1 == n2) {
+            n2 = parseInt(prompt("Введіть друге число від 1 до 5 відміне від першого"))
+        }
+        while (((n1 != x) && (n1 != y)) || ((n2 != x) && (n2 != y))) {
+            var n1 = parseInt(prompt("Введіть перше число від 1 до 5"))
+            var n2 = parseInt(prompt("Введіть друге число від 1 до 5 відміне від першого"))
+            while (n1 == n2) {
+                n2 = parseInt(prompt("Введіть друге число від 1 до 5 відміне від першого"))
+            }
+            k++
+        }
+        alert(`Кількість спроб - ${k}\nЗагадані числa - ${x} і ${y}`)
+    </script> -->
+    <!-- 12. З клавіатури вводяться поступово числа. Знайти два найбільші числа. Ввід здійснюється до тих пір, поки різниця між такими числами є більшою за 5. -->
+    <!-- <script>
+        let n = parseFloat(prompt("N="))
+        let max1 = n
+        n = parseFloat(prompt("N=")
+        let max2
+        if (n > max1)
+            max2 = n
+        else {
+            max2 = max1, max1 = n
+        }
+        while (Math.abs(max2 - max1) > 5) {
+            n = parseFloat(prompt("N="))
+            if (n > max1) {
+                if (n > max2) {
+                    max1 = max2
+                    max2 = n
+                }
+                else
+                    max1 = n
+            }
+        }
+        document.write(max1, " і ", max2)
+    </script> -->
+    <!-- 13. З клавіатури вводяться поступово числа. Знайти два найменші числа. Ввід здійснюється до тих пір, поки різниця між такими числами є більшою за 5. -->
+    <!-- <script>
+        let n = parseFloat(prompt("N="))
+        let min1 = n
+        n = parseFloat(prompt("N="))
+        let min2
+        if (n < min1)
+            min2 = n
+        else {
+            min2 = min1, min1 = n
+        }
+        while (Math.abs(min1 - min2) > 5) {
+            n = parseFloat(prompt("N="))
+            if (n < min1) {
+                if (n < min2) {
+                    min1 = min2, min2 = n
+                }
+                else
+                    min1 = n
+            }
+        }
+        document.write(min1, " i ", min2)
+    </script> -->
+</body>
+
+</html>

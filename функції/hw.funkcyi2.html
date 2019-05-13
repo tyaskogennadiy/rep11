@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        td {
+            border: 2px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Задача 1. Створити функцію, яка за номером місяця повертає його назву.
+        // function month(x) {
+        //     switch (x) {
+        //         case 1: return "січень"
+        //         case 2: return "лютий"
+        //         case 3: return "березень"
+        //         case 4: return "квітень"
+        //         case 5: return "травень"
+        //         case 6: return "червень"
+        //         case 7: return "липень"
+        //         case 8: return "серпень"
+        //         case 9: return "вересень"
+        //         case 10: return "жовтень"
+        //         case 11: return "листопад"
+        //         case 12: return "грудень"
+        //         default: return "error"
+        //     }
+        // }
+        // var x = parseInt(prompt("Введіть номер місяця"))
+        // document.write(month(x))
+        // Задача 2. Створити функцію, яка за номером тижня повертає кількість уроків(так, як у вас було у школі).
+        // function month(x) {
+        //     switch (x) {
+        //         case 1: return "6"
+        //         case 2: return "7"
+        //         case 3: return "6"
+        //         case 4: return "5"
+        //         case 5: return "5"
+        //         default: return "error"
+        //     }
+        // }
+        // var x = parseInt(prompt("Введіть номер дня"))
+        // document.write(month(x))
+        //         Задача 3. Створити окремі функції, які для 4 чисел знаходять:
+        // 1)суму;
+        // 2)добуток;
+        // 3)середнє арифметичне;
+        // 4)мінімальне значення. 
+        //         var sum = (a, b, c, d) => a + b + c + d
+        //         var dob = (a, b, c, d) => a * b * c * d
+        //         var seredArifmet = (a, b, c, d) => (a + b + c + d) / 4
+        //         function min(a, b, c, d) {
+        //             var min = a
+        //             min = (min < b) ? min : b
+        //             min = (min < c) ? min : c
+        //             min = (min < d) ? min : d
+        //             return min
+        //         }
+        //         let a = parseFloat(prompt("a="))
+        //         let b = parseFloat(prompt("b="))
+        //         let c = parseFloat(prompt("c="))
+        //         let d = parseFloat(prompt("d="))
+        //         let x = parseFloat(prompt(`Вкажіть дію:
+        //  1)суму;
+        //  2)добуток;
+        //  3)середнє арифметичне;
+        //  4)мінімальне значення. `))
+        //         switch (x) {
+        //             case 1: alert(sum(a, b, c, d))
+        //                 break;
+        //             case 2: alert(dob(a, b, c, d))
+        //                 break;
+        //             case 3: alert(seredArifmet(a, b, c, d))
+        //                 break;
+        //             case 4: alert(min(a, b, c, d))
+        //                 break;
+        //             default: alert("error")
+        //                 break;
+        //         }
+        // Задача 4. Створити функцію, яка для 3 заданих чисел знаходить кількість парних.
+        // function paired() {
+        //     var k = 0
+        //     for (let i = 0; i < 3; i++) {
+        //         var x = parseInt(prompt("Введіть число"))
+        //         if (x % 2 == 0)
+        //             k++
+        //     }
+        //     return k
+        // }
+        // alert(paired())
+        //         Задача 5. Створити функції, які переводять:
+        // 1)	Сантиметри у дюйми;
+        // 2)	Кілограми у фунти;
+        // 3)	Кілометри у милі.
+        //         function converter(x, y) {
+        //             switch (y) {
+        //                 case 1: return x * 0.393701
+        //                 case 2: return x * 2.20462
+        //                 case 3: return x * 0.621371
+        //             }
+        //         }
+        //         var x = parseFloat(prompt("Введіть число"))
+        //         var y = parseInt(prompt(`Виберіть перетвореня:
+        // 1)-Сантиметри у дюйми;
+        // 2)-Кілограми у фунти;
+        // 3)-Кілометри у милі.`))
+        //         document.write((converter(x, y).toFixed(2)))
+        // Задача 6. Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців
+        // function td(y) {
+        //     for (let i = 0; i < y; i++) {
+        //         document.write(`<td></td>`)
+        //     }
+        // }
+        // function tab(x, y) {
+        //     document.write("<table>")
+        //     for (let j = 0; j < x; j++) {
+        //         document.write(`<tr>${td(y)}</tr>`)
+        //     }
+        //     document.write("</table>")
+        // }
+        // var x = parseInt(prompt("Введіть к-сть рядків"))
+        // var y = parseInt(prompt("Введіть к-сть стовпців"))
+        // tab(x, y)
+        // Задача 7. Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень (шляхи до зображень передаються у функцію)
+        // function img(href1, href2, href3, href4) {
+        //     var x = 1 + Math.floor(Math.random() * 4)
+        //     switch (x) {
+        //         case 1: return href1
+        //         case 2: return href2
+        //         case 3: return href3
+        //         case 4: return href4
+
+        //         default: return "error"
+        //     }
+        // }
+        // document.write(`<img src=${img("./img/1.jpg", "./img/2.jpg", "./img/3.jpg", "./img/4.jpg")} alt="img">`)
+        // Задача 8. Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди переходимо при кліку на зображення (тег img повине знаходитись у середині тега a: <a> <img src=”шлях”> </a>
+        //     function baner(title, href, src) {
+        //         document.write(`<h1>${title}</h1>`)
+        //         document.write(`<a href=${href}><img src=${src} alt="img"></a>`)
+        //     }
+        //     baner("moto", "https://motosalon-cobra.com.ua/p29507192-mototsikl-bajaj-pulsar.html", "./img/2.jpg")
+        // 3)	Задано координати вершин трикутника. Визначити чи є він прямокутним, за допомогою підпрограми.  Якщо так – вивести довжину гіпотенузи.
+        // function getLengthSide(x1, y1, x2, y2) {
+        //     return Math.sqrt((Math.pow(Math.abs(x1 - x2), 2) + Math.pow(Math.abs(y1 - y2), 2)))
+        // }
+        // function isRectangle(x1, y1, x2, y2, x3, y3) {
+        //     var a = Math.floor(getLengthSide(x1, y1, x2, y2))
+        //     var b = Math.floor(getLengthSide(x1, y1, x3, y3))
+        //     var c = Math.floor(getLengthSide(x3, y3, x2, y2))
+        //     if (a * a == b * b + c * c)
+        //         return a
+        //     else if (b * b == a * a + c * c)
+        //         return b
+        //     else if (c * c == a * a + b * b)
+        //         return c
+        //     else
+        //         return "Трикутник не е прямокутником"
+        // }
+        // var x1 = parseInt(prompt("x1="))
+        // var y1 = parseInt(prompt("y1="))
+        // var x2 = parseInt(prompt("x2="))
+        // var y2 = parseInt(prompt("y2="))
+        // var x3 = parseInt(prompt("x3="))
+        // var y3 = parseInt(prompt("y3="))
+        // document.write(isRectangle(x1, y1, x2, y2, x3, y3))
+    </script>
+
+
+</body>
+
+</html>

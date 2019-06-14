@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function getAge() {
+            var year = document.getElementById("yearBirth").value
+            var age = 2019 - year
+            document.getElementById("res").value = age
+        }
+        function x1(y,money) {
+            switch (y) {
+                    case 1: return money
+                        break;
+                    case 2: return money / 25
+                        break;
+                    case 3: return money / 30
+                        break;
+                }                
+        }
+        function x2(y,money) {
+            switch (y) {
+                    case 1:return money * 25
+                        break;
+                    case 2: return money
+                        break;
+                    case 3: return money * 0.89
+                        break;
+                } 
+        }
+        function x3(y,money) {
+            switch (y) {
+                    case 1: return money * 30
+                        break;
+                    case 2: return money * 1.12
+                        break;
+                    case 3: return money
+                        break;
+                } 
+        }
+        function konvertor(params) {
+            var x = parseInt(document.getElementById("n1").value)
+            var y = parseInt(document.getElementById("n2").value)
+            var money = parseFloat(document.getElementById("countsMoney").value)
+            var resultat
+            switch (x) {
+                case 1:resultat=x1(y,money)
+                    break;
+                case 2:resultat=x2(y,money) 
+                    break;
+                case 3:resultat=x3(y,money)
+                    break;
+            }
+            document.getElementById("res2").value = resultat
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Задача 1. Користувач задає рік народження. Визначити кількість років користувача -->
+    <label for="">Рік народження: <input type="number" id="yearBirth" max="2019" min="0"></label>
+    <br>
+    <button onclick="getAge()">Рахувати</button><br>
+    <label for="">К-сть років: <input type="number" id="res"></label>
+    
+    <!-- Задача 2. Конвертер валют. -->
+    <h1>Конвертер валют.</h1>
+    <select name="" id="n1">
+        <option value="1">UAN</option>
+        <option value="2">USD</option>
+        <option value="3">EUR</option>
+    </select>
+    <input type="number" id="countsMoney"><br><br>
+    <select name="" id="n2">
+        <option value="1">UAN</option>
+        <option value="2">USD</option>
+        <option value="3">EUR</option>
+    </select>
+    <input type="number" id="res2"><br><br>
+    <button onclick="konvertor()">Рахувати</button>
+    <!-- Задача 3. Калькулятор з вибором операції (додавання, віднімання, множення, ділення). -->
+    <script>
+    function dob() {
+        var x=document.getElementById("num1").value
+        var y=document.getElementById("num2").value
+       document.getElementById("res3").value = x*y
+    }
+    function dil() {
+        var x=document.getElementById("num1").value
+        var y=document.getElementById("num2").value
+       document.getElementById("res3").value = x/y
+    }
+    function sum() {
+        var x=document.getElementById("num1").value
+        var y=document.getElementById("num2").value
+       document.getElementById("res3").value = +x+(+y)
+    }
+    function riz() {
+        var x=document.getElementById("num1").value
+        var y=document.getElementById("num2").value
+       document.getElementById("res3").value = x-y
+    }
+    </script>
+    <h1>Калькулятор</h1>
+    <label for="">Number 1: <input type="number" id="num1"></label><br>  
+    <label for="">Number 2: <input type="number" id="num2"></label><br><br>
+    <button onclick="dob()">*</button>
+    <button onclick="dil()">/</button>
+    <button onclick="sum()">+</button>
+    <button onclick="riz()">-</button><br><br>
+    <label for="">Результат: <input type="number" id="res3"></label><br><hr><br>
+    <!-- Задача. Дано списки продуктів. Знайти сумарну вартість -->
+    <script>
+    function createInput() {
+        var product=document.createElement("input")
+        product.type="text"
+        product.placeholder="продукт"
+        var price=document.createElement("input")
+        price.type="number"
+        price.value="0"
+        price.className="price"
+        var d=document.getElementById("createInputs")
+        d.appendChild(product)
+        d.appendChild(price)
+        d.innerHTML+="<br>"
+    }
+    function getSum() {
+        let inputs=document.getElementById("createInputs").getElementsByClassName("price")
+        let sum=0
+        for (let i = 0; i < inputs.length; i++) {
+            sum+=+inputs[i].value
+        }
+document.getElementById("res4").innerText=sum
+    }
+    </script>
+    <h1>Список продуктів</h1>
+    <button onclick="createInput()">Додати поле</button><br><br>
+    <div id="createInputs">
+    </div><hr>
+    <button onclick="getSum()">Загальна сума</button><br><br>
+    Результат: <span id="res4"></span>
+    <!-- Задача. Знайти середню оцінку учня. Кількість та оцінки вводяться користувачем (використати таблицю з компонентами input). -->
+    <script>
+    function getTabl() {
+        var creaTable=document.createElement("table")
+        var creaRov=document.createElement("tr")
+        var countsTd=parseInt(document.getElementById("countsTd").value)
+        for (let i = 0; i < countsTd; i++) {
+            var creaTd=document.createElement("td")
+            var creaInput=document.createElement("input")
+            creaInput.type="number"
+            creaInput.value=0
+            creaTd.appendChild(creaInput)
+            creaRov.appendChild(creaTd)
+        }
+        creaTable.appendChild(creaRov)
+        creaTable.border="solid black 2px"
+var div=document.getElementById("myTab")
+div.appendChild(creaTable)
+    }
+    function getSum1() {
+        let inputs=document.querySelectorAll("table input")
+        let sum=0
+        for (let i = 0; i < inputs.length; i++) {
+            sum+=+inputs[i].value           
+        }
+        let res=sum/inputs.length
+        document.getElementById("res5").innerText=res
+    }
+    </script>
+    <hr><hr>
+    <h1>Знайти середню оцінку учня.</h1>
+    <label for="">Введіть к-сть оцінок: <input type="number" id="countsTd"></label><br>
+    <button onclick="getTabl()">Створити таблицю</button>
+    <div id="myTab"></div>
+    <button onclick="getSum1()">Середня оцінка</button>
+    Результат: <span id="res5"></span>

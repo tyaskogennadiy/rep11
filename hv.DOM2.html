@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    function plusEx() {
+        var ex=document.createElement("input")
+        ex.type="text"
+        ex.placeholder="Завданя"
+        var but=document.createElement("input")
+        but.type="checkbox"
+        var l=document.createElement("li")
+        l.appendChild(ex)
+        l.appendChild(but)
+        l.innerHTML+="<br><br>"
+        var myOl=document.getElementById("olEx")
+        myOl.appendChild(l)
+    }
+    function del() {
+        var olEx=document.getElementById("olEx")        
+        olEx.removeChild("input")
+    }
+    function inp() {
+       var x=document.getElementById("aaa").value
+       document.getElementById("in").value=x 
+    }
+    </script>
+</head>
+<body>
+        <!-- Задача. Сформувати список завдань ( з можливістю подальшого вилучення). -->
+        <h1>Список завдань</h1>
+        <button onclick="plusEx()">Додати завданя</button>
+        <ol id="olEx"></ol>
+        <button onclick="del()">delete</button>
+        <input type="checkbox" id="aaa">
+        <input type="text" id="in">
+        <button onclick="inp()"></button>
+        <!-- Задача. Сформувати список працівників (ПІБ, посада, заробітна плата). По одному додається інформація про працівників у вигляді таблиці (як у попередньому завданні). Потім знайти сумарну заробітну плату працівників, у яких заробітна плата більша за 3000. -->
+        <br><hr><br>
+        <script>
+        function dodWoker() {
+            var tab=document.getElementById("myTable")
+            
+            let tr=document.createElement("tr")
+            let td=document.createElement("td")
+            let inp1=document.createElement("input")
+td.appendChild(inp1)
+tr.appendChild(td)
+td=document.createElement("td")
+inp1=document.createElement("input")
+td.appendChild(inp1)
+tr.appendChild(td)
+td=document.createElement("td")
+inp2=document.createElement("input")
+inp2.type="namber"
+inp2.value=0
+inp2.className="zarplata"
+td.appendChild(inp2)
+tr.appendChild(td)
+tab.appendChild(tr)
+        }
+        function getSum() {
+            var inputs=document.getElementsByClassName("zarplata")
+            var sum=0
+            for (let i = 0; i < inputs.length; i++) {
+                if(inputs[i].value>3000)
+                sum+=+inputs[i].value
+            }
+            document.getElementById("res2").innerText=sum
+        }
+        </script>
+        <h1>Список працівників</h1>
+        <button onclick="dodWoker()">Додати працівника</button><br><br>
+        <table id="myTable" border=" 2px solid bleck "><tr><td>ПІБ</td>
+        <td>посада</td>
+        <td>заробітна плата</td></tr></table>
+        <button onclick="getSum()">sum</button>
+        resultat: <span id="res2"></span>
+</body>
+</html>

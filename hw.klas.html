@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // Задача. Створити об’єкт «Діапазон»
+        // Діапазон	
+        // Поля (властивості)	Нижня межа
+        // Верхня межа
+        // Методи (дії)	Перевірка того, чи належить діапазону
+        // Генерування випадкового числа з вказаного діапазону
+
+
+        var diapazon = {
+            minLimit: min,
+            maxLimit: max,
+            isNumberCorrect: function (number) {
+                return (number >= this.minLimit && number <= this.maxLimit)
+            },
+            getRondomNumber: function () {
+                return Math.floor(Math.random() * (this.maxLimit - this.minLimit + 1)) + this.minLimit
+            }
+        }
+        // -------------------------------------------------------
+        // Задача. Створити об’єкт «Клієнт»
+        // Клієнт	
+        // Поля(властивості)	ПІБ
+        // Номер рахунку
+        // Кількість коштів
+        // Методи (дії)	Зняття грошей з рахунку
+        // Додавання грошей на рахунок
+        function user(name, accountNumber, amountMoney) {
+            this.name = name
+            this.accountNumber = accountNumber
+            this.amountMoney = amountMoney
+        }
+        user.prototype.takingMoney = function (money) {
+            return this.amountMoney -= money
+        }
+        user.prototype.adding = function (money) {
+            return this.amountMoney += money
+        }
+        // Задача. Створити об’єкт «Рулетка»
+        // Рулетка		
+        // Поля(властивості)	Масив, у якому зберігаються бали ігрового барабану
+        // Методи (дії)	Метод для випадкового визначення кількості балів
+        // Виведення ігрового барабану на екран (у формі таблиці)
+        function inputArr() {
+            var arr = []
+            let el = 0
+            for (let i = 0; i < 20; i++) {
+                el += 50
+                arr.push(el)
+            }
+            return arr
+        }
+        function roulette(arrPoints) {
+            this.arrPoints=arrPoints
+        }
+roulette.prototype.getScore= function () {
+    let n=Math.floor(Math.random()*20)
+    return this.arrPoints[n]
+}
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

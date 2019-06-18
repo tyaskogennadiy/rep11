@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Задача 1. Дано оцінки учня за 5 предметів у 12 бальній шкалі.  Вивести номери предметів, з яких у учня трійки? -->
+    <script>
+        // function inputArr() {
+        //     var arr=[]
+        //     for (let i = 0; i < 5; i++) {
+        //        let el=parseInt(prompt(`Введіть оцінку за ${i+1} предмет`))
+        //         arr.push(el)
+        //     }
+        //     return arr
+        // }
+        // let arr=inputArr()
+        // let brr=[]
+        // for (let i = 0; i < arr.length; i++) {
+        //     if(arr[i]>3&&arr[i]<7)
+        //     brr.push(i+1)        
+        // }
+        // document.write(brr)
+        // Задача 2. Користувач вводить 10 слів. Підрахувати кількість слів, у яких перша літера і остання літера однакові.
+        // let s=0
+        // for (let i = 0; i < 10; i++) {
+        //    let word=prompt(`Введіть слово №  ${i+1} `)
+        //     if(word[0]==word[word.length-1])
+        //     s++
+        // }
+        // document.write(s)
+        //  Задача 3. Дано послідовність чисел, які згенеровано випадковим чином. Сформувати новий масив, у якому елементи є більшими за перший елемент.
+        // function inputArrey() {
+        //         var length = parseInt(prompt("length="))
+        //         let arr = []
+        //         for (let i = 0; i < length; i++) {
+        //             let el = prompt(`Введіть ${i + 1} елемент`)
+        //             arr.push(el)
+        //         }
+        //         return arr
+        //     }
+        //     let arr = inputArrey()
+        //     const a=arr[0]
+        //     let brr=arr.filter(el=>el>a)
+        //     document.write(brr)
+        // Задача 4. Усі елементи введеного масиву помножити на 17. 
+        // function inputArrey() {
+        //     var length = parseInt(prompt("length="))
+        //     let arr = []
+        //     for (let i = 0; i < length; i++) {
+        //         let el = prompt(`Введіть ${i + 1} елемент`)
+        //         arr.push(el)
+        //     }
+        //     return arr
+        // }
+        // let arr = inputArrey()
+        // arr.forEach((el, i, arr) => arr[i] = el * 17)
+        // document.write(arr)
+        // Задача 5. Знайти суму елементів, які знаходяться після елемента зі значенням 78.
+        function inputArrey() {
+            var length = parseInt(prompt("length="))
+            let arr = []
+            for (let i = 0; i < length; i++) {
+                let el = parseFloat(prompt(`Введіть ${i + 1} елемент`))
+                arr.push(el)
+            }
+            return arr
+        }
+        let arr = inputArrey()
+        let pos =arr.indexOf(78)
+        let brr=arr.slice(pos+1,arr.length)
+        document.write(brr.reduce((sum,el)=>sum+el))
+    </script>
+</body>
+
+</html>

@@ -12,7 +12,7 @@
     <!-- З клавіатури вводяться числа до тих пір, поки послідовність є зростаючою або спадною. -->
     <!-- <script>
         let n1 = parseFloat(prompt("N="))
-        let n2 = parseFloat(prompt("N="))
+        let n2 = parseFloat(prompt("N="))           Подумайте, як це зробити з одним циклом
         if (n1 < n2) {
             while (n1 < n2) {
                 document.write(n1, " ")
@@ -63,7 +63,7 @@
         let n1 = parseInt(prompt("Введіть перше число діапазону"))
         let n2 = parseInt(prompt("Введіть останне число діапазону"))
         let sum = 0
-        for (let i = n1; i <= n2; i++) {
+        for (let i = n1; i <= n2; i++) {   Подумайте, як уникнути перевірки на парність
             if (i % 2 == 1) {
                 sum += i
             }
@@ -155,7 +155,7 @@
         let i = 1
         while (step <= n) {
             if (step == n) {
-                alert("Yes")
+                alert("Yes")   Чому не використали break
                 step = n + 1
             }
             else {
@@ -249,7 +249,7 @@
     </script> -->
     <!-- 23. Даны натуральные числа от 20 до 50.Напечатать те из них, которые делятся на 3, но не делятся на 5. -->
     <!-- <script>
-        for (let i = 20; i <= 50; i++) {
+        for (let i = 20; i <= 50; i++) {   Подумайте як скоротити кількість умов (тут і у наступних задачах)
             if ((i % 3 == 0) && (i % 5 != 0))
                 document.write(i, " ")
         }
@@ -304,7 +304,7 @@
         let sum = 0
         let n = 0
         let x = prompt("Введіть рост учня у см")
-        while (x != null) {
+        while (x != null) {    N учащихся класса
             sum += (+x)
             n++
             x = prompt("Введіть рост учня у см")
@@ -325,7 +325,7 @@
     <!-- <script>
         let n1
         let n2
-        for (let i = 1000; i < 10000; i++) {
+        for (let i = 1000; i < 10000; i++) {  Простіше було написати чотири вкладені цикли (для кожної цифри)
             n1 = Math.floor(i / 100)
             n2 = i % 100
             if ((n2 != 0) && (i % (n1 * n2) == 0))
@@ -438,7 +438,7 @@
             n = Math.floor(n / 10)
         }
         if (x%2 == 1)
-            document.write("true")
+            document.write("true")  Використовуйте оператор break
         else
             document.write("false")
     </script>  -->
